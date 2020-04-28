@@ -35,10 +35,9 @@ WHERE C.instructor_id = I.instructor_id AND I.department_id = D.department_id
 AND D.name= 'Mathematics';
 
 --6.
-SELECT U.name FROM Person.UserInfo U, Person.Student S, Enroll.Enrolled E
-WHERE U.info_id = S.info_id AND S.student_id = E.student_id
-GROUP BY U.name
-HAVING COUNT(*) = 0;
+SELECT name FROM Person.UserInfo U
+JOIN (SELECT * FROM Person.Student WHERE student_id NOT IN (SELECT student_id FROM Enroll.Enrolled)) A
+ON U.info_id = A.info_id;
 
 --7.
 UPDATE Person.UserInfo
