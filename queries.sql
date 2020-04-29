@@ -1,11 +1,11 @@
 /*
 Queries:
 1. Select all courses from the Course table
-2. Select all the course_id that the student with student_id ‘ITITIU18123’ enrolled
-3. Select the name of the student with student_id ‘ITITIU18123’
+2. Select all the course_id that the student with student_id â€˜ITITIU18123â€™ enrolled
+3. Select the name of the student with student_id â€˜ITITIU18123â€™
 4. Select all the course name that the instructor 'Ta Ngoc Hoang' teaches
 5. Select all the courses which the instructors in the Mathemetics department teach
-6. Select all name of the students who aren’t enrolled with at least 1 course
+6. Select all name of the students who arenâ€™t enrolled in at least 1 course
 7. Change the email of 'Shia LaBeouf' to 'justdoit@gmail.com'
 8. Set the phone of 'Mac Van Chi' to '0546466678'
 9. Change the staff_id of the staff with staff_id 'STAFF004' to 'STAFF005'
@@ -41,15 +41,15 @@ ON U.info_id = A.info_id;
 
 --7.
 UPDATE Person.UserInfo
-SET email = 'justdoit@gmail.com' WHERE name = 'Shia LaBeouf'
+SET email = 'justdoit@gmail.com' WHERE name = 'Shia LaBeouf';
 
 --8.
 UPDATE Person.UserInfo
-SET phone_number = '0546466678' WHERE name = 'Mac Van Chi'
+SET phone_number = '0546466678' WHERE name = 'Mac Van Chi';
 
 --9.
 UPDATE Person.Staff
-SET staff_id = 'STAFF005' WHERE staff_id = 'STAFF004'
+SET staff_id = 'STAFF005' WHERE staff_id = 'STAFF004';
 
 --10.
 SELECT * INTO temp FROM Enroll.Enrolled WHERE student_id = 'ITCSIU16234';
